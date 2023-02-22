@@ -18,7 +18,8 @@ function sortTable() {
 }
 
 //Add a print button
-printButton.addEventListener('click', () => {
+printButton.addEventListener('click', (event) => {
+  event.preventDefault();
   window.print();
 });
 
