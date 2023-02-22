@@ -1,5 +1,7 @@
 @media print {
-  #schedule-form {
+  #schedule-form,
+  #schedule-table th:nth-child(3),
+  #schedule-table td:nth-child(3) {
     display: none;
   }
 }
@@ -70,6 +72,18 @@ body {
   #schedule-table tr:nth-child(even) {
     background-color: #444;
   }
+
+  #schedule-table th:nth-child(1),
+  #schedule-table td:nth-child(1) {
+    width: 90%;
+  }
+
+  #schedule-table th:nth-child(2),
+  #schedule-table td:nth-child(2),
+  #schedule-table th:nth-child(3),
+  #schedule-table td:nth-child(3) {
+    width: 5%;
+  }
   
   .delete-button {
     background-color: #f44336;
@@ -77,4 +91,7 @@ body {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    width: 100%;
+    height: auto;
+    padding: 6px;
   }

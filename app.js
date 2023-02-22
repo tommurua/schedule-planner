@@ -2,6 +2,10 @@ const form = document.getElementById('schedule-form');
 const table = document.getElementById('schedule-table');
 const printButton = document.querySelector('.print-button');
 
+let today = new Date().toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"})
+
+document.getElementById('date-time').innerHTML=today
+
 function sortTable() {
   // Get all rows in the table
   const rows = Array.from(table.rows).slice(1);  // slice(1) to exclude the header row
@@ -49,3 +53,5 @@ table.addEventListener('click', (event) => {
     sortTable();
   }
 });
+
+
