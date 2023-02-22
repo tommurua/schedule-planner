@@ -1,5 +1,6 @@
 const form = document.getElementById('schedule-form');
 const table = document.getElementById('schedule-table');
+const printButton = document.querySelector('.print-button');
 
 function sortTable() {
   // Get all rows in the table
@@ -15,6 +16,11 @@ function sortTable() {
   // Add the sorted rows back to the table
   rows.forEach((row) => table.appendChild(row));
 }
+
+//Add a print button
+printButton.addEventListener('click', () => {
+  window.print();
+});
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
